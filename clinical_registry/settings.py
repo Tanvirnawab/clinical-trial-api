@@ -23,11 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-tp&+0s0xujgkr@=il0@+2i739#an(9b*&$e$g%^vz56u6o=)@s"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get("DEBUG", "False") == "True"
 
-ALLOWED_HOSTS = ["clinical-trial-api-ebyq.onrender.com",
-    "localhost",
-    "127.0.0.1",]
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "").split(",")
+
 
 
 # Application definition
