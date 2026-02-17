@@ -25,7 +25,9 @@ SECRET_KEY = "django-insecure-tp&+0s0xujgkr@=il0@+2i739#an(9b*&$e$g%^vz56u6o=)@s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["clinical-trial-api-ebyq.onrender.com",
+    "localhost",
+    "127.0.0.1",]
 
 
 # Application definition
